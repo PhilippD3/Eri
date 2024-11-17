@@ -19,11 +19,11 @@ def rk2 (text):
         for i in range(len(x)):
                 if x[i]<(sr-sigma):
                         o[0]=o[0]+1
-                if x[i]>(sr-sigma) and x[i]<(sr):
+                if x[i]>=(sr-sigma) and x[i]<(sr):
                         o[1]=o[1]+1
-                if x[i]>(sr)and x[i]<(sr+sigma):
+                if x[i]>=(sr)and x[i]<(sr+sigma):
                         o[2]=o[2]+1
-                if  x[i]>(sr+sigma):
+                if  x[i]>=(sr+sigma):
                         o[3] = o[3]+1
 
         E = [N*0.16,N*0.34,N*0.34,N*0.16]
