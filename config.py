@@ -50,6 +50,13 @@ def three_sigma(text):
                 maxi = i
                 hui = abs(nums[i] - x_avg)
         a.append(f"X_avg до: {x_avg}")
+        sumi = 0
+        for i in range(len(nums)):
+            sumi = sumi + ((nums[i] - x_avg) * (nums[i] - x_avg))
+        # Вычисляем стандартное отклонение
+
+        sigma = math.sqrt((sumi) / (len(nums) - 2))
+        a.append(f"sigma до = {sigma}")
         # Пересчитываем среднее без выброса
         
         x_avg = 0
